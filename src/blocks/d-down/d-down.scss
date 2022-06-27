@@ -1,0 +1,239 @@
+$zindex-dropdown: 1000!important;
+$dropdown-min-width: 200px;
+$dropdown-spacer: 10px;
+.d-down {
+	$self: &;
+	position: relative;
+	@include media('<=lg') {
+		background-size: 22px 12px;
+	}
+			
+
+
+	&_opened {
+		#{$self}__items {
+			display: block;
+		}
+	}
+
+	&__toggle {
+		position: relative;
+		display: inline-flex;
+		height: 50px;
+		padding: 0 34px;
+		font-weight: 400;
+		font-size: 16px;
+		color: $primaryColor;
+		border: 1px solid rgb($primaryColor, 0.2);
+		border-radius: 5px;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+
+		span {
+			padding-right: 13px;
+			position: relative;
+			&::before {
+				content: '';
+				position: absolute;
+				width: 10px;
+				height: 10px;
+				right: 0;
+				top: calc(50% - 5px);
+				background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.00244 8L0.672314 0.5L9.33257 0.5L5.00244 8Z' fill='%23355CE0'/%3E%3C/svg%3E%0A");
+				background-position: center center;
+				background-repeat: no-repeat;
+			}
+		}
+	}
+
+	&__toggle.show {
+		border-color: $primaryColor;
+		outline: 0;
+		box-shadow: 0 0 0 0.25rem rgb($primaryColor, 0.25);
+	}
+
+	&__head {
+		font-size: 30px;
+		display: block;
+		cursor: pointer;
+				
+		@include media('<=lg') {
+			font-size: 24px;
+		}
+				
+
+	}
+
+	&__items {
+		overflow: hidden;
+		border-top: none;
+		padding: 15px;
+
+	}
+
+	&__item {
+		font-size: 14px;
+		color: $primaryColor;
+		display: block;
+		padding: 5px 0;
+	}
+}
+
+// The dropdown wrapper (`<div>`)
+.dropup,
+.dropend,
+.dropdown,
+.dropstart
+.dropup-center,
+.dropdown-center {
+	position: relative;
+}
+
+.dropdown-toggle {
+	white-space: nowrap;
+}
+
+// The dropdown menu
+.dropdown-menu {
+	position: absolute;
+	z-index: $zindex-dropdown;
+	display: none; // none by default, but block on "open" of the menu
+	min-width: $dropdown-min-width;
+	margin: 0; // Override default margin of ul
+	color: $blackColor;
+	text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+	list-style: none;
+	background-clip: padding-box;
+	padding: 15px;
+	box-shadow: 1px 1px 20px rgba(5, 15, 50, 0.3);
+	border-radius: 15px;
+	background: #fff;
+	opacity: 0.1;
+
+	@keyframes items_fade {
+		from {opacity: 0;}
+		to {opacity: 1;}
+	}
+	animation: items_fade 0.5s ease;
+
+	&--end {
+		--bs-position: end;
+		&[data-bs-popper] {
+			right: 0;
+			left: auto;
+		}
+	}
+	&--end {
+		--bs-position: end;
+		&[data-bs-popper] {
+			right: 0;
+			left: auto;
+		}
+	}
+
+	&[data-bs-popper] {
+		top: 100%;
+		left: 0;
+		margin-top: $dropdown-spacer;;
+	}
+}
+.dropdown-menu.show {
+	display: block;
+	opacity: 1;
+}
+
+
+.dropup {
+	.dropdown-menu[data-bs-popper] {
+		top: auto;
+		bottom: 100%;
+		margin-top: 0;
+		margin-bottom: $dropdown-spacer;
+	}
+
+	.dropdown-toggle {
+
+	}
+}
+
+.dropend {
+	.dropdown-menu[data-bs-popper] {
+		top: 0;
+		right: auto;
+		left: 100%;
+		margin-top: 0;
+		margin-left: $dropdown-spacer;
+	}
+
+	.dropdown-toggle {
+
+		&::after {
+			vertical-align: 0;
+		}
+	}
+}
+
+.dropstart {
+	.dropdown-menu[data-bs-popper] {
+		top: 0;
+		right: 100%;
+		left: auto;
+		margin-top: 0;
+		margin-right: $dropdown-spacer;
+	}
+
+	.dropdown-toggle {
+
+		&::before {
+			vertical-align: 0;
+		}
+	}
+}
+
+.dropdown-item {
+	display: block;
+	width: 100%; // For `<button>`s
+	clear: both;
+	text-align: inherit; // For `<button>`s
+	text-decoration: none;
+	white-space: nowrap; // prevent links from randomly breaking onto new lines
+	background-color: transparent; // For `<button>`s
+	border: 0; // For `<button>`s
+
+	font-size: 14px;
+	color: $primaryColor;
+	padding: 5px 0;
+
+	&:hover,
+	&:focus {
+		color: $blackColor;
+	}
+
+	&.active,
+	&:active {
+		color: $blackColor;
+	}
+
+	&.disabled,
+	&:disabled {
+		color: $secondaryColor;
+	}
+}
+
+.dropdown-menu.show {
+	display: block;
+}
+
+// Dropdown section headers
+.dropdown-header {
+	display: block;
+	margin-bottom: 0; // for use with heading elements
+
+	white-space: nowrap; // as with > li > a
+}
+
+// Dropdown text
+.dropdown-item-text {
+	display: block;
+}

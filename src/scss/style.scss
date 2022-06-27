@@ -1,0 +1,61 @@
+@import "lib/additional.scss";
+
+.container {
+	--bs-gutter-x: 16px
+}
+$breakpoints: (
+				xs: 0,
+				sm: 576px,
+				md: 768px,
+				lg: 992px,
+				xl: 1200px,
+				xxl: 1400px
+);
+
+// Import animate-scss
+//@import
+	//"../../node_modules/animate-scss/_properties.scss",
+//	"../../node_modules/animate-scss/_sliding-entrances/sliding-entrances.scss";
+
+
+
+@import "../../node_modules/swiper/swiper";
+
+// Import BEM blocks scss
+@import "../blocks/**/*.scss";
+
+body, html {
+	box-sizing: border-box;
+	font-size: #{$basesize}px;
+	font-family: $fontPrimary;
+	color: $blackColor;
+	font-weight: 400;
+	background-color: #fff;
+	min-height: 100vh;
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.mb-16 {
+	margin-bottom: 16px;
+}
+.row {
+	--bs-gutter-x: 16px;
+	@include media('>=lg') {
+		--bs-gutter-x: 32px;
+	}
+}
+
+
+.main {
+	padding-top: 112px;
+	@include media('>=sm') {
+		padding-top: 166px;
+	}
+}
+// .main { flex: 1 0 auto; }
+.footer { 
+	flex: 0 0 auto; 
+	margin-top: auto; 
+}
+

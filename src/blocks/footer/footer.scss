@@ -1,0 +1,19 @@
+.footer {
+	padding-top: 34px;
+	padding-bottom: 32px;
+	text-align: center;
+	line-height: 150%;
+	&__socials {
+		margin-bottom: 10px;
+	}
+
+	@include media('>=sm') {
+		padding-top: 58px;
+	}
+	@include media('>=sm') {
+		padding-top: 58px;
+	}
+	@include media('>=lg') {
+		padding-top: 94px;
+	}
+}

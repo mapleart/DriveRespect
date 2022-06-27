@@ -1,0 +1,39 @@
+<div class="f-form">
+    <div class="f-form__title title text-center">Please leave feedback</div>
+
+    <form>
+
+        <div class="row">
+            <div class="col-12 col-sm-6 mb-16 mb-lg-0">
+
+                <div class="f-spacer">
+                    <input type="text" class="f-control" placeholder="Theme">
+                </div>
+                <div class="f-spacer">
+                    <textarea type="text" class="f-control" rows="6" placeholder="Please, leave a review or wish"></textarea>
+                </div>
+
+                <button type="submit" class="button d-none d-sm-flex button--block button--primary">Send a message</button>
+            </div>
+            <div class="col-12 col-sm-6 ">
+                <div class="f-uploader js-file-uploader">
+                    <div class="f-uploader__text">
+                        <p>Drag and drop files here from your computer or download them using the button below.</p>
+                        <p>Acceptable formats: jpg, png.</p>
+                        <p>Size - up to 2 MB. Maximum 5 images.</p>
+                    </div>
+                    <input type="file" id="upload-feedback-button" hidden class="js-custom-uploader">
+                    <label for="upload-feedback-button" class="f-uploader__button">To add a file</label>
+                    <div class="f-uploader__file-selected"></div>
+                    <div class="f-uploader__text-short">
+                        Size - up to 2 MB. Maximum 5 images.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <button type="submit" class="button d-sm-none button--block button--primary">Send a message</button>
+    </form>
+</div>
+

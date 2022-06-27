@@ -1,0 +1,48 @@
+@@include("_head.html", {"class":"body-home"})
+@@include("_header.html", {"class":"header_home"})
+
+<main class="main">
+    <div class="container">
+        <div class="title text-center">Your last order</div>
+        <div class="title-sub text-center">Order dated October 5, 2021</div>
+
+        <div class="o-cheque">
+            <div class="o-cheque__products">
+                <div class="o-cheque__product">
+                    <div class="o-cheque__product__image">
+                        <img src="./images/stuff/content2.png">
+                    </div>
+                    <div class="o-cheque__product__body">
+                        <div class="o-cheque__product__name">
+                            <a href="#">Don’t drink and drive 01, 9x6 in, black</a>
+                        </div>
+                    </div>
+                    <div class="o-cheque__product__price">
+                        $7.00
+                    </div>
+                </div>
+                <div class="o-cheque__product">
+                    <div class="o-cheque__product__image">
+                        <img src="./images/stuff/content3.png">
+                    </div>
+                    <div class="o-cheque__product__body">
+                        <div class="o-cheque__product__name">
+                            <a href="#">Don’t drink and drive 04, 9x6 in, black</a>
+                        </div>
+                    </div>
+                    <div class="o-cheque__product__price">
+                        $7.00
+                    </div>
+                </div>
+            </div>
+            <div class="o-cheque__footer">
+                <span>Total:</span>
+                <span>$14.00</span>
+            </div>
+        </div>
+
+        @@include("_feedback.html")
+    </div>
+</main>
+
+@@include("_bottom.html")

@@ -1,0 +1,162 @@
+<!DOCTYPE html> 
+<html lang="ru"> 
+<head> 
+	<meta charset="UTF-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="style.css"> 
+	<title></title> 
+</head> 
+<body class="body-home">
+<header class="header header_home" data-scroll-lock-fill-gap>
+	<div class="container">
+		<div class="header__inner">
+
+			<div class="header__logo">
+				<a href="./" class="header__logo__link"><img src="./images/logo.svg" alt="" /></a>
+			</div>
+
+
+
+
+			<div class="header__menu-blind" data-scroll-lock-scrollable>
+				<div class="header__nav">
+					<a href="#" class="header__nav__link">Mission</a>
+					<a href="#" class="header__nav__link">Catalog</a>
+					<a href="#" class="header__nav__link">Log in</a>
+				</div>
+			</div>
+
+			<a href="./lk.html" class="header__user">
+				<div class="header__user__avatar"><img src="./images/stuff/content1.png"></div>
+			</a>
+
+			<a href="./cart.html" class="header__cart active">
+				<span>99+</span>
+			</a>
+
+
+			<div class="header__menu-toggle d-sm-none">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+
+
+	</div>
+
+</header>
+
+<main class="main">
+    <div class="container">
+
+        <div class="breadcrumb">
+            <div class="breadcrumb__item"><a href="">Home</a></div>
+            <div class="breadcrumb__item"><a href="#">Shopping cart</a></div>
+            <div class="breadcrumb__item active">Checkout</div>
+        </div>
+
+
+
+        <form>
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <h2 class="title title--checkout">Checkout</h2>
+
+                    <div class="checkout-form">
+                        <div class="row">
+                            <div class="col-12 col-sm-6">
+                                <div class="f-group">
+                                    <input class="f-control" placeholder="Full name" name="full_name">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="f-group">
+                                    <input class="f-control" placeholder="Phone" name="phone">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f-group">
+                            <input class="f-control" placeholder="E-mail" name="email">
+                        </div>
+                        <div class="f-group">
+                            <input class="f-control" placeholder="Country / Region" name="country">
+                        </div>
+                        <div class="f-group">
+                            <input class="f-control" placeholder="City" name="city">
+                        </div>
+                        <div class="f-group">
+                            <input class="f-control" placeholder="address" name="Address">
+                        </div>
+                        <div class="f-group">
+                            <input class="f-control" placeholder="ZIP" name="zip">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 col-order">
+                    <h2 class="title title--checkout">Your order</h2>
+
+                    <div class="c-order">
+                        <div class="c-products">
+                            <div class="c-products__item">
+                                <img src="./images/stuff/content2.png">
+                                <div class="c-products__item__body">
+                                    <div class="c-products__item__title">
+                                        <a href="#">Don’t drink and drive 01, black</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="c-products__item">
+                                <img src="./images/stuff/content2.png">
+                                <div class="c-products__item__body">
+                                    <div class="c-products__item__title">
+                                        <a href="#">Don’t drink and drive 04,  black</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c-order__total">
+                            <span>Total:</span>
+                            <span>$14.00</span>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="button button--primary button--block-sm">
+                    Check out now
+                </button>
+
+            </div>
+        </form>
+
+
+    </div>
+</main>
+
+<footer class="footer"> 
+	<div class="container">
+		<div class="footer__socials socials">
+			<a href="#" class="icon-fb"></a>
+			<a href="#" class="icon-instagram"></a>
+			<a href="#" class="icon-tw"></a>
+		</div>
+		<div class="footer__copyright">
+			© Drive & Respect. All rights reserved.
+		</div>
+	</div>
+</footer> 
+<script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
+<script src="common.js"></script> 
+</body> 
+</html> 
+

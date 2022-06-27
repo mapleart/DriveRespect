@@ -1,0 +1,191 @@
+<!DOCTYPE html> 
+<html lang="ru"> 
+<head> 
+	<meta charset="UTF-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="style.css"> 
+	<title></title> 
+</head> 
+<body class="body-home">
+<header class="header header_home" data-scroll-lock-fill-gap>
+	<div class="container">
+		<div class="header__inner">
+
+			<div class="header__logo">
+				<a href="./" class="header__logo__link"><img src="./images/logo.svg" alt="" /></a>
+			</div>
+
+
+
+
+			<div class="header__menu-blind" data-scroll-lock-scrollable>
+				<div class="header__nav">
+					<a href="#" class="header__nav__link">Mission</a>
+					<a href="#" class="header__nav__link">Catalog</a>
+					<a href="#" class="header__nav__link">Log in</a>
+				</div>
+			</div>
+
+			<a href="./lk.html" class="header__user">
+				<div class="header__user__avatar"><img src="./images/stuff/content1.png"></div>
+			</a>
+
+			<a href="./cart.html" class="header__cart active">
+				<span>99+</span>
+			</a>
+
+
+			<div class="header__menu-toggle d-sm-none">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+
+
+	</div>
+
+</header>
+
+<main class="main">
+    <div class="container">
+        <div class="title text-center">History of orders</div>
+        <div class="title-sub text-center">Order dated October 5, 2021</div>
+
+        <div class="o-cheque">
+            <div class="o-cheque__products">
+                <div class="o-cheque__product">
+                    <div class="o-cheque__product__image">
+                        <img src="./images/stuff/content2.png">
+                    </div>
+                    <div class="o-cheque__product__body">
+                        <div class="o-cheque__product__name">
+                            <a href="#">Don’t drink and drive 01, 9x6 in, black</a>
+                        </div>
+                    </div>
+                    <div class="o-cheque__product__price">
+                        $7.00
+                    </div>
+                </div>
+                <div class="o-cheque__product">
+                    <div class="o-cheque__product__image">
+                        <img src="./images/stuff/content3.png">
+                    </div>
+                    <div class="o-cheque__product__body">
+                        <div class="o-cheque__product__name">
+                            <a href="#">Don’t drink and drive 04, 9x6 in, black</a>
+                        </div>
+                    </div>
+                    <div class="o-cheque__product__price">
+                        $7.00
+                    </div>
+                </div>
+            </div>
+            <div class="o-cheque__footer">
+                <span>Total:</span>
+                <span>$14.00</span>
+            </div>
+        </div>
+
+        <div class="title-sub text-center">Order dated October 5, 2021</div>
+
+        <div class="o-cheque">
+            <div class="o-cheque__products">
+                <div class="o-cheque__product">
+                    <div class="o-cheque__product__image">
+                        <img src="./images/stuff/content2.png">
+                    </div>
+                    <div class="o-cheque__product__body">
+                        <div class="o-cheque__product__name">
+                            <a href="#">Don’t drink and drive 01, 9x6 in, black</a>
+                        </div>
+                    </div>
+                    <div class="o-cheque__product__price">
+                        $7.00
+                    </div>
+                </div>
+                <div class="o-cheque__product">
+                    <div class="o-cheque__product__image">
+                        <img src="./images/stuff/content3.png">
+                    </div>
+                    <div class="o-cheque__product__body">
+                        <div class="o-cheque__product__name">
+                            <a href="#">Don’t drink and drive 04, 9x6 in, black</a>
+                        </div>
+                    </div>
+                    <div class="o-cheque__product__price">
+                        $7.00
+                    </div>
+                </div>
+            </div>
+            <div class="o-cheque__footer">
+                <span>Total:</span>
+                <span>$14.00</span>
+            </div>
+        </div>
+
+        <div class="f-form">
+    <div class="f-form__title title text-center">Please leave feedback</div>
+
+    <form>
+
+        <div class="row">
+            <div class="col-12 col-sm-6 mb-16 mb-lg-0">
+
+                <div class="f-spacer">
+                    <input type="text" class="f-control" placeholder="Theme">
+                </div>
+                <div class="f-spacer">
+                    <textarea type="text" class="f-control" rows="6" placeholder="Please, leave a review or wish"></textarea>
+                </div>
+
+                <button type="submit" class="button d-none d-sm-flex button--block button--primary">Send a message</button>
+            </div>
+            <div class="col-12 col-sm-6 ">
+                <div class="f-uploader js-file-uploader">
+                    <div class="f-uploader__text">
+                        <p>Drag and drop files here from your computer or download them using the button below.</p>
+                        <p>Acceptable formats: jpg, png.</p>
+                        <p>Size - up to 2 MB. Maximum 5 images.</p>
+                    </div>
+                    <input type="file" id="upload-feedback-button" hidden class="js-custom-uploader">
+                    <label for="upload-feedback-button" class="f-uploader__button">To add a file</label>
+                    <div class="f-uploader__file-selected"></div>
+                    <div class="f-uploader__text-short">
+                        Size - up to 2 MB. Maximum 5 images.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <button type="submit" class="button d-sm-none button--block button--primary">Send a message</button>
+    </form>
+</div>
+
+
+    </div>
+</main>
+
+<footer class="footer"> 
+	<div class="container">
+		<div class="footer__socials socials">
+			<a href="#" class="icon-fb"></a>
+			<a href="#" class="icon-instagram"></a>
+			<a href="#" class="icon-tw"></a>
+		</div>
+		<div class="footer__copyright">
+			© Drive & Respect. All rights reserved.
+		</div>
+	</div>
+</footer> 
+<script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
+<script src="common.js"></script> 
+</body> 
+</html> 

@@ -1,0 +1,492 @@
+.m-form {
+  background: #FFFFFF;
+  box-shadow: 1px 1px 20px rgba(5, 15, 50, 0.3);
+  border-radius: 15px;
+  padding: 34px;
+
+  &__body {
+    max-width: 426px;
+    margin: 0 auto;
+
+    @include media('<sm') {
+      margin: 0 -20px;
+      max-width: none;
+    }
+  }
+  &__toolbar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    @include media('>=sm') {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    line-height: 130%;
+    color: #355CE0;
+    margin-bottom: 20px;
+    @include media('<sm') {
+      font-size: 16px;
+    }
+  }
+
+  &__desc {
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    max-width: 305px;
+    margin: 0 auto 20px;
+    line-height: 130%;
+
+    @include media('<sm') {
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+  }
+  @include media('<sm') {
+    padding: 20px 20px 26px;
+
+    .button[type=submit] {
+      display: flex;
+      width: 100%;
+    }
+
+    .f-check-label {
+      font-size: 10px;
+      line-height: 11px;
+      padding-top: 5px;
+    }
+
+  }
+}
+
+.f-select{
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 0 34px;
+  -moz-padding-start: calc(0.75rem - 3px);
+  font-size: 16px;
+  font-weight: 400;
+  color: $blackColor;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+  border: 1px solid rgb($primaryColor, 0.2);
+  border-radius: 5px;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  &::before {
+    content: '';
+  }
+  &:focus {
+    border-color: $primaryColor;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb($primaryColor, 0.25);
+  }
+
+  &--primary {
+    color: $primaryColor;
+  }
+}
+
+.form-uploader {
+  display: inline-flex;
+  min-height: 24px;
+  padding-left: 30px;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.38399 20C2.53754 20 1.72485 19.6375 1.07714 18.9667C-0.358991 17.4759 -0.35899 15.0512 1.07681 13.5613L12.275 1.25718C14.0222 -0.55355 16.6986 -0.390846 18.6517 1.63262C19.5268 2.53976 20.0179 3.84753 19.9995 5.22212C19.9811 6.5822 19.4675 7.88381 18.5899 8.79353L10.1266 18.1161C9.89105 18.3773 9.49606 18.3892 9.24461 18.1442C8.99376 17.8988 8.98159 17.4895 9.21809 17.2293L17.6941 7.89252C18.3571 7.20523 18.7375 6.23028 18.7515 5.20402C18.7655 4.17713 18.407 3.20896 17.7693 2.54749C16.5712 1.30526 14.6206 0.654764 13.1704 2.15881L1.97251 14.463C1.00969 15.4618 1.01 17.0659 1.96003 18.0515C2.40555 18.5128 2.93439 18.7375 3.49754 18.7023C4.05477 18.6671 4.6276 18.3714 5.11057 17.8703L14.0206 8.05775C14.3435 7.72298 14.9925 6.90236 14.332 6.21732C13.9579 5.82961 13.6952 5.8535 13.6088 5.86093C13.362 5.88352 13.0737 6.06011 12.7745 6.37067L6.0681 13.7508C5.83129 14.0113 5.43599 14.0239 5.18606 13.7782C4.9349 13.5335 4.92335 13.1235 5.15954 12.864L11.8781 5.46998C12.4064 4.92086 12.9464 4.62321 13.4962 4.57221C13.9252 4.5328 14.5632 4.62741 15.214 5.30276C16.18 6.30414 16.0599 7.77302 14.9161 8.95908L6.00603 18.771C5.29467 19.5096 4.43572 19.9387 3.57398 19.9935C3.51065 19.998 3.44731 20 3.38397 20L3.38399 20Z' fill='%23050F32'/%3E%3C/svg%3E");
+  background-position: left center;
+  background-repeat: no-repeat;
+  align-items: center;
+  cursor: pointer;
+  span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: $blackColor;
+    padding-bottom: 3px;
+    border-bottom: 1px dashed $blackColor;
+  }
+}
+
+
+.f-control {
+  display: block;
+  width: 100%;
+  padding: 15px 24px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: $blackColor;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #C4C4C4;
+  appearance: none; // Fix appearance for date inputs in Safari
+
+  border-radius: 8px;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+  &[type="file"] {
+    overflow: hidden; // prevent pseudo element button overlap
+
+    &:not(:disabled):not([readonly]) {
+      cursor: pointer;
+    }
+  }
+
+  &:hover {
+    border-color: #80A7EA;
+  }
+
+  // Customize the `:focus` state to imitate native WebKit styles.
+  &:focus {
+    color: $blackColor;
+    background-color: #fff;
+    border-color: #3570C8;
+    outline: 0;
+  }
+
+  // Add some height to date inputs on iOS
+  // https://github.com/twbs/bootstrap/issues/23307
+  // TODO: we can remove this workaround once https://bugs.webkit.org/show_bug.cgi?id=198959 is resolved
+  &::-webkit-date-and-time-value {
+    // Multiply line-height by 1em if it has no unit
+    //height: if(unit($input-line-height) == "", $input-line-height * 1em, $input-line-height);
+  }
+
+  // Placeholder
+  &::placeholder {
+    color: $blackColor;
+    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+    opacity: 0.8;
+  }
+
+  // Disabled and read-only inputs
+  //
+  // HTML5 says that controls under a fieldset > legend:first-child won't be
+  // disabled if the fieldset is disabled. Due to implementation difficulty, we
+  // don't honor that edge case; we style them as disabled anyway.
+  &:disabled,
+  &[readonly] {
+    background-color: $secondaryColor;
+    border-color: $secondaryColor;
+    // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+    opacity: 1;
+  }
+}
+
+.f-floating {
+  position: relative;
+
+  > .f-control,
+  > .f-select {
+    height: 56px;
+  }
+
+  > label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%; // allow textareas
+    padding: 10px 20px;
+    pointer-events: none;
+    border: 1px solid transparent; // Required for aligning label's text with the input as it affects inner box model
+    transform-origin: 0 0;
+    color: rgba($blackColor, 0.6);
+  }
+
+  // stylelint-disable no-duplicate-selectors
+  > .f-control {
+    padding: 10px 20px;
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:focus,
+    &:not(:placeholder-shown) {
+      padding-top: 1.625rem;
+      padding-bottom: .625rem;
+    }
+    // Duplicated because `:-webkit-autofill` invalidates other selectors when grouped
+    &:-webkit-autofill {
+      padding-top: 1.625rem;
+      padding-bottom: .625rem;
+    }
+  }
+
+  > .f-select{
+    padding-top: 1.625rem;
+    padding-bottom: .625rem;
+  }
+
+  > .f-control:focus,
+  > .f-control:not(:placeholder-shown),
+  > .f-select{
+    ~ label {
+      opacity: .65;
+      transform: scale(.85) translateY(-.5rem) translateX(.15rem);
+    }
+  }
+  // Duplicated because `:-webkit-autofill` invalidates other selectors when grouped
+  > .f-control:-webkit-autofill {
+    ~ label {
+      opacity: .65;
+      transform: scale(.85) translateY(-.5rem) translateX(.15rem);
+    }
+  }
+  // stylelint-enable no-duplicate-selectors
+}
+
+
+//
+// Check/radio
+//
+$f-check-input-width: 23px;
+.f-check {
+  min-height: 24px;
+  display: inline-flex;
+  align-items: start;
+  gap: 5px;
+  user-select: none;
+
+  .f-check-input {
+  }
+}
+
+.f-check-input {
+  width: $f-check-input-width;
+  height: $f-check-input-width;
+  margin-top: (24px - $f-check-input-width) * .5; // line-height minus check height
+  vertical-align: top;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 2px solid rgba($primaryColor, 0.6);
+  appearance: none;
+  color-adjust: exact; // Keep themed appearance for print
+
+  &[type="checkbox"] {
+    border-radius: 7px;
+  }
+
+  &[type="radio"] {
+    // stylelint-disable-next-line property-disallowed-list
+
+    border-radius: 50%;
+    border: 2px solid $primaryColor;
+    width: 15px;
+    height: 15px;
+    margin-top: (24px - 15px) * .5; // line-height minus check height
+    & + .f-check-label {
+      color: $blackColor;
+    }
+  }
+
+  &:active {
+    filter: brightness(90%);
+  }
+
+  &:focus {
+    border-color: $primaryColor;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba($primaryColor, 0.25);
+  }
+
+  &:checked {
+    background-color: rgba($primaryColor, 0.6);
+    border-color: #fff;
+
+    &[type="checkbox"] {
+      background-image: url("data:image/svg+xml,%3Csvg width='14' height='17' viewBox='0 0 14 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.875549 6.06185L6.62555 14.2077L12.3755 0.791016' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A");
+    }
+
+    &[type="radio"] {
+      background-color: $primaryColor;
+      border-color: $primaryColor;
+
+
+    }
+  }
+
+  &[type="checkbox"]:indeterminate {
+    //background-color: $f-check-input-indeterminate-bg-color;
+    //border-color: $f-check-input-indeterminate-border-color;
+
+    //background-image: escape-svg($f-check-input-indeterminate-bg-image);
+
+  }
+
+  &:disabled {
+    pointer-events: none;
+    filter: none;
+    opacity: 0.6;
+  }
+
+  // Use disabled attribute in addition of :disabled pseudo-class
+  // See: https://github.com/twbs/bootstrap/issues/28247
+  &[disabled],
+  &:disabled {
+    ~ .f-check-label {
+      opacity: 0.6;
+    }
+  }
+}
+
+.f-check-label {
+  color: rgba($blackColor, 0.6);
+
+
+  @include media('<sm') {
+    font-size: 14px;
+  }
+  a {
+    color: rgba($blackColor, 0.6);
+    text-decoration: none;
+    display: inline-block;
+    padding-bottom: 4px;
+    border-bottom: 1px dashed rgba($blackColor, 0.6);
+  }
+}
+
+.f-spacer {
+  $self: &;
+  & + button[type="submit"],
+  & + & {
+    margin-top: 16px;
+    @include media('>=lg') {
+      margin-top: 24px;
+    }
+  }
+}
+
+.f-uploader {
+  text-align: center;
+  &__text {
+    margin-bottom: 24px;
+    display: none;
+    text-align: center;
+    font-size: 12px;
+    line-height: 18px;
+    p {
+      margin: 0;
+    }
+    p:first-child {
+      margin-bottom: 8px;
+      @include media('>=lg'){
+        margin-bottom: 16px;
+
+      }
+    }
+    p:nth-child(2) {
+      margin-bottom: 4px;
+      @include media('>=lg'){
+        margin-bottom: 8px;
+
+      }
+    }
+    @include media('>=sm'){
+      display: block;
+    }
+    @include media('>=lg'){
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 32px;
+    }
+  }
+  &__text-short {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    margin: 16px 0 24px;
+    @include media('>=sm'){
+      display: none;
+    }
+  }
+  &__button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(82, 139, 224, 0.4);
+    border-radius: 8px;
+    height: 56px;
+    padding: 0 32px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #263238;
+    cursor: pointer;
+    &:hover {
+      background: rgba(82, 139, 224, 0.56);
+    }
+    &:active {
+      background: rgba(82, 139, 224, 0.64);
+    }
+    @include media('<sm'){
+      display: flex;
+    }
+  }
+  &__file-selected {
+    display: none;
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  &.not-empty {
+    .f-uploader__file-selected {
+      display: block;
+    }
+  }
+  @include media('>sm'){
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(231, 241, 255, 0.4);
+    border: 1px dashed #C4C4C4;
+    border-radius: 8px;
+    padding: 20px 40px;
+    @include media('>=lg'){
+      padding: 20px 56px;
+    }
+
+    &.highlight {
+      position: relative;
+      background: rgba(231, 241, 255, 0.8);
+      border: 1px dashed #C4C4C4;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+      }
+    }
+  }
+
+}
+
+.f-form {
+  &__title {
+    @include media('<sm') {
+      margin-bottom: 24px;
+    }
+  }
+}

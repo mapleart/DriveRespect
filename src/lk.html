@@ -1,0 +1,68 @@
+@@include("_head.html", {"class":"body-home"})
+@@include("_header.html", {"class":"header_home"})
+
+<main class="main">
+    <div class="container">
+        <div class="row p-panel__wrap">
+            <div class="col-12 col-sm-12 col-lg-4">
+                <div class="p-panel">
+                    <div class="row">
+
+                        <div class="col-12 col-sm-6 col-lg-12">
+                            <div class="p-panel__user">
+                                <div class="p-panel__user__avatar">
+                                    <img src="./images/stuff/content5.png">
+                                </div>
+                                <div class="p-panel__user__name">
+                                    User name
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-lg-12">
+                            <div class="p-panel__contacts">
+                                <div><strong>Telephone :</strong> <span>8 (999) 99 99</span></div>
+                                <div><strong>Email :</strong> <span>example@gmail.com</span></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+                <a href="./last-order.html" class="p-panel">
+                    <div class="p-panel__user">
+                        <div class="p-panel__user__product"><img src="./images/stuff/content6.png"></div>
+                        <div class="p-panel__user__name">
+                            Your last order
+                        </div>
+                    </div>
+
+                    <div class="p-panel__footer">October 5, 2021</div>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+                <a href="./history-orders.html"  class="p-panel">
+                    <div class="p-panel__user">
+                        <div class="p-panel__user__products">
+                            <div class="p-panel__user__product"><img src="./images/stuff/content6.png"></div>
+                            <div class="p-panel__user__product"><img src="./images/stuff/content6.png"></div>
+                            <div class="p-panel__user__product"><img src="./images/stuff/content6.png"></div>
+                        </div>
+                        <div class="p-panel__user__name">
+                            History of orders
+                        </div>
+                    </div>
+
+                    <div class="p-panel__footer">11 orders</div>
+                </a>
+            </div>
+
+        </div>
+
+        @@include("_feedback.html")
+
+    </div>
+</main>
+
+@@include("_bottom.html")

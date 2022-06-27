@@ -1,0 +1,123 @@
+.title--checkout {
+    margin-bottom: 24px;
+
+    @include media('>=sm') {
+        margin-bottom: 16px;
+        font-size: 24px;
+        line-height: 40px;
+    }
+    @include media('>=lg') {
+        margin-bottom: 32px;
+    }
+}
+.checkout-form {
+    margin-bottom: 40px;
+
+    .f-control {
+       margin-bottom: 16px;
+
+        @include media('>=sm') {
+            margin-bottom: 32px;
+        }
+    }
+    & > *:last-child {
+        .f-control {
+            margin-bottom: 0;
+        }
+    }
+
+    button[type="submit"]{
+        margin-top: 10px;
+    }
+
+    @include media('>=sm') {
+        margin-bottom: 56px;
+    }
+
+}
+
+.c-order {
+    background: #E7F1FF;
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin-bottom: 32px;
+
+    &__total {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 120%;
+
+        @include media('>=sm') {
+            font-size: 24px;
+            line-height: 40px;
+        }
+    }
+    @include media('>=sm') {
+        padding: 32px 40px;
+    }
+    @include media('>=lg') {
+        margin-bottom: 56px;
+    }
+}
+.c-products {
+    margin-bottom: 32px;
+    &__item {
+        display: flex;
+        margin-bottom: 10px;
+        img {
+            width: 88px;
+            margin-right: 16px;
+        }
+        &__body {
+            flex: 1;
+
+            a {
+                font-weight: 800;
+                font-size: 14px;
+                line-height: 20px;
+                color: $blackColor;
+                text-decoration: none;
+
+                @include media('>=sm') {
+                    font-size: 16px;
+                }
+            }
+        }
+        @include media('>=sm') {
+            align-items: center;
+            margin-bottom: 32px;
+            img {
+                width: 130px;
+            }
+        }
+
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+    }
+
+    @include media('>=sm') {
+        margin-bottom: 56px;
+    }
+}
+
+.col-order {
+    @include media('>=lg') {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        .c-order {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            &__total {
+                margin-top: auto;
+            }
+        }
+    }
+}
